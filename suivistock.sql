@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 24 fév. 2021 à 02:02
+-- Généré le :  mar. 02 mars 2021 à 14:14
 -- Version du serveur :  10.1.36-MariaDB
 -- Version de PHP :  7.2.11
 
@@ -41,8 +41,9 @@ CREATE TABLE `produit` (
 --
 
 INSERT INTO `produit` (`id`, `ref`, `libelle`, `qtStock`, `idUsers`) VALUES
-(22, 'pro0015555', 'pommede sion', 15, 1),
-(23, 'pro001', 'mais', 10, 1);
+(1, 'PD_02032021_1', 'pommade sion', 15, 1),
+(2, 'PD_02032021_2', 'sac de riz', 6, 1),
+(3, 'PD_02032021_3', 'sac de farine', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -56,7 +57,7 @@ CREATE TABLE `users` (
   `prenom` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `etat` varchar(50) NOT NULL
+  `etat` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -64,7 +65,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nom`, `prenom`, `email`, `password`, `etat`) VALUES
-(1, 'thaddy', 'bonheur', 'bonheurthaddy0@gmail.com', 'passer', 'admin');
+(1, 'Libissa', 'Georges', 'glibissa03@gmail.com', 'mdp', 1);
 
 --
 -- Index pour les tables déchargées
