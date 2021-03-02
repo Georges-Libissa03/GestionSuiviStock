@@ -1,0 +1,22 @@
+RewriteEngine on
+RewriteRule ^.{0}$ index.php
+
+RewriteRule ^Connection$ src/view/connection/connection.php 
+
+RewriteRule ^addProduit$ src/view/accueil/accueil.php?p=ajoutProduit
+RewriteRule ^listProduit$ src/view/accueil/accueil.php?p=gProduit
+RewriteRule ^editProduit$ src/view/accueil/accueil.php?p=editProduit
+RewriteRule ^successAddProduit$ src/view/accueil/accueil.php?p=ajoutProduit&ok=1
+RewriteRule ^successEditProduit$ src/view/accueil/accueil.php?p=gProduit&update=1
+RewriteRule ^successDeleteProduit$ src/view/accueil/accueil.php?p=gProduit&delete=1
+RewriteRule ^failAddProduit$ src/view/accueil/accueil.php?p=ajoutProduit&ok=0
+RewriteRule ^failEditProduit$ src/view/accueil/accueil.php?p=gProduit&update=0
+RewriteRule ^failDeleteProduit$ src/view/accueil/accueil.php?p=gProduit&delete=0
+
+RewriteRule ^addUser$ src/view/accueil/accueil.php?p=ajoutUser
+RewriteRule ^listUser$ src/view/accueil/accueil.php?p=gUsers
+
+RewriteRule ^produitC$ src/controller/ControllerProduit.php
+RewriteRule ^usersC$ src/controller/ControllerUsers.php
+
+RewriteRule ^accueil$ src/view/accueil/accueil.php 
